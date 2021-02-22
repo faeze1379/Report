@@ -19,9 +19,9 @@
         </td>
       </tr>
       <tr ng-repeat="p in reports | filter : filter">
-        <td>{{p.data}}</td>
-        <td>{{p.family}}</td>
-        <td>{{p.report}}</td>
+        <td>{{p.data | date:m/dd/yy }}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.decrip}}</td>
       </tr>
      
     </table>
