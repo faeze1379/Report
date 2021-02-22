@@ -1,0 +1,38 @@
+<div class="uk-margin-top">
+  <p class="uk-text-uppercase">login</p>
+</div>
+<form name="myForm" action="#saveReport">
+  <div class="uk-margin-top">
+    <input
+      placeholder="Username"
+      type="text"
+      name="myName"
+      ng-model="myName"
+      class="uk-input uk-form-width-medium uk-form-small"
+      required
+    />
+    <span ng-show="myForm.myName.$touched && myForm.myName.$invalid">*</span>
+  </div>
+  <div class="uk-margin">
+    <input
+      placeholder="password"
+      type="password"
+      class="uk-input uk-form-width-medium uk-form-small"
+      name="myPass"
+      ng-model="myPass"
+      required
+    />
+    <span ng-show="myForm.myPass.$touched && myForm.myPass.$invalid">*</span>
+  </div>
+  <div class="uk-margin">
+    <input type="checkbox" class="uk-checkbox" /> Remember me
+  </div>
+  <div class="uk-margin">
+    <button class="uk-button uk-button-secondary uk-button-small">
+      Log in
+    </button>
+  </div>
+  <div class="uk-margin-top">
+    Not a Member? <a class="uk-text" href="#register">Sign up Now</a>
+  </div>
+</form>

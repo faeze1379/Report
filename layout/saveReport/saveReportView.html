@@ -1,0 +1,67 @@
+<div
+  ng-controller="saveReportController"
+  dir="rtl"
+  class="uk-background-blend-secondery uk-background-image@s uk-background-cover uk-background-muted uk-flex uk-flex-center uk-flex-middle"
+  style="background-image: url(../../img/mini-profile-bg-02.jpg); height: 640px"
+  uk-grid
+>
+  <form name="myForm">
+    <fieldset class="uk-fieldset">
+      <legend class="uk-legend">گزارش کار</legend>
+
+      <div class="uk-margin">
+        <input
+          class="uk-input uk-form-width-large"
+          type="text"
+          placeholder="نام و نام خانوادگی "
+          name="myName"
+          ng-model="myName"
+          required
+        />
+        <span ng-show="myForm.myName.$touched && myForm.myName.$invalid"
+          >*</span
+        >
+      </div>
+      <div class="uk-margin">
+        <input
+          class="uk-input uk-form-width-large"
+          type="date"
+          placeholder="تاریخ"
+          name="mydata"
+          ng-model="mydata"
+          required
+        />
+        <span ng-show="myForm.mydata.$touched && myForm.mydata.$invalid"
+          >*</span
+        >
+      </div>
+      <div class="uk-margin">
+        <textarea
+          class="uk-textarea uk-form-width-large"
+          rows="10"
+          placeholder="متن گزارش"
+          name="mytext"
+          ng-model="mytext"
+          required
+        ></textarea>
+        <span ng-show="myForm.mytext.$touched && myForm.mytext.$invalid"
+          >*</span
+        >
+      </div>
+
+      <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+        <div>
+        <button class="uk-button uk-button-Secondary" ng-click="set()">
+          ثبت
+        </button>
+      </div>
+      <div>
+          <button class="uk-button uk-button-danger" ng-click="get()">
+            انصراف
+          </button>
+        </div>
+      
+      </div>
+    </fieldset>
+  </form>
+</div>

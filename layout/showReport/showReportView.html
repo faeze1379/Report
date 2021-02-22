@@ -1,0 +1,32 @@
+<article dir="rtl"  ng-controller="showReportController">
+  <div >
+ 
+    <table class="uk-table uk-table-striped">
+      <tr>
+        <th class="uk-table-shrink">تاریخ</th>
+        <th class="uk-width-small">نام ونام خانوادگی</th>
+        <th class="uk-table-expand">گزارش روزانه</th>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" ng-model="filter.data" name="data"/>
+        </td>
+        <td>
+          <input type="text" ng-model="filter.family" name="family"/>
+        </td>
+        <td>
+          <input type="text" ng-model="filter.report" name="report" />
+        </td>
+      </tr>
+      <tr ng-repeat="p in reports | filter : filter">
+        <td>{{p.data}}</td>
+        <td>{{p.family}}</td>
+        <td>{{p.report}}</td>
+      </tr>
+     
+    </table>
+  </div>
+ 
+</article>
+
+

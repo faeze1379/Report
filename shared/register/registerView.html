@@ -1,0 +1,58 @@
+<div class="uk-margin-top">
+  <p class="uk-text-uppercase">register</p>
+</div>
+<form name="myForm">
+  <div class="uk-margin-top">
+    <input
+      placeholder="FullName"
+      type="text"
+      name="myName"
+      ng-model="myName"
+      class="uk-input uk-form-width-medium uk-form-small"
+      required
+    />
+    <span ng-show="myForm.myName.$touched && myForm.myName.$invalid">*</span>
+  </div>
+  <div class="uk-margin">
+    <input
+      placeholder="Email"
+      type="email"
+      class="uk-input uk-form-width-medium uk-form-small"
+      name="myEmail"
+      ng-model="myEmail"
+      required
+    />
+    <span ng-show="myForm.myEmail.$touched && myForm.myEmail.$invalid">*</span>
+  </div>
+  <div class="uk-margin">
+    <input
+      placeholder="Password"
+      type="password"
+      class="uk-input uk-form-width-medium uk-form-small"
+      name="myPass"
+      ng-model="myPass"
+      required
+    />
+    <span ng-show="myForm.myPass.$touched && myForm.myPass.$invalid">*</span>
+  </div>
+  <div class="uk-margin">
+    <input
+      placeholder="Repassword"
+      type="password"
+      class="uk-input uk-form-width-medium uk-form-small"
+      name="myPass"
+      ng-model="myPass"
+      required
+    />
+    <span ng-show="myForm.myPass.$touched && myForm.myPass.$invalid">*</span>
+  </div>
+  <div class="uk-margin">
+    <button class="uk-button uk-button-secondary uk-button-small">
+      Sign Up
+    </button>
+    <span class="uk-margin-left">
+      Did you already register?
+      <a class="uk-text" href="#!login">login</a>
+    </span>
+  </div>
+</form>
