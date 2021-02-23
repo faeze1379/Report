@@ -19,6 +19,10 @@ app.config([
         url: "/saveReport",
         templateUrl: "../layout/saveReport/saveReportView.html",
       })
+      .state("layout.updateView", {
+        url: "/update",
+        templateUrl: "../layout/update/updateView.html",
+      })
       .state("layout.showReportView", {
         url: "/showReport",
         templateUrl: "../layout/showReport/showReportView.html",
