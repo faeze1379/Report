@@ -6,6 +6,8 @@
         <th class="uk-width-small">نام کاربری</th>
         <th class="uk-table-shrink">ایمیل</th>
         <th class="uk-table-expand">کلمه ی عبور</th>
+        <th class="uk-table-expand">حذف</th>
+        <th class="uk-table-expand">به روز رسانی</th>
       </tr>
       <tr>
         <td>
@@ -22,6 +24,8 @@
         <td>{{p.name | date:m/dd/yy }}</td>
         <td>{{p.email}}</td>
         <td>{{p.pass}}</td>
+        <td><button class="uk-button uk-button-danger" type="button" ng-click="delete(p)">حذف</button></td>
+        <td><button class="uk-button uk-button-primary" type="button">به روز زسانی</button></td>
       </tr>
      
     </table>

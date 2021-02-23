@@ -5,12 +5,11 @@ app.controller("loginController", function ($scope,$state) {
 
     for (var i = 0; i < users.length; i++) {
       if (users[i].name === $scope.myName && users[i].pass === $scope.myPass) {
-        console.log(users[i]);
-        var l = 1;
+        var is_bool = 1;
         $state.go('layout.saveReportView');
         break;
       }
     }
-    if (l != 1) alert("رمز ورود یا نام کاربری صحیح نیست");
+    if (is_bool != 1) alert("رمز ورود یا نام کاربری صحیح نیست");
   };
 });
