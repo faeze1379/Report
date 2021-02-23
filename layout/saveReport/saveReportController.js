@@ -11,7 +11,7 @@ app.controller("saveReportController", function ($scope) {
     reports.push(a);
     localStorage.setItem("userReport", JSON.stringify(reports));
     var x = JSON.parse(localStorage.getItem("userReport"));
-    alert(" گزارش " + x.name + " ثبت شد ");
+    alert("گزارش شما ثبت شد");
   };
   $scope.left = function () {
     alert("Are you sure you want to cancel?..");
