@@ -9,18 +9,7 @@
         <th class="uk-table-expand">حذف</th>
         <th class="uk-table-expand">به روز رسانی</th>
       </tr>
-      <tr>
-        <td>
-          <input type="text" ng-model="filter.name" name="name"/>
-        </td>
-        <td>
-          <input type="text" ng-model="filter.email" name="email"/>
-        </td>
-        <td>
-          <input type="text" ng-model="filter.pass" name="pass" />
-        </td>
-      </tr>
-      <tr ng-repeat="p in users | filter : filter">
+      <tr ng-repeat="p in users ">
         <td>{{p.name | date:m/dd/yy }}</td>
         <td>{{p.email}}</td>
         <td>{{p.pass}}</td>
