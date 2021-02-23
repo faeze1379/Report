@@ -23,6 +23,10 @@ app.config([
         url: "/showReport",
         templateUrl: "../layout/showReport/showReportView.html",
       })
+      .state("layout.listRegisterView", {
+        url: "/listRegister",
+        templateUrl: "../layout/listRegister/listRegisterView.html",
+      })
       .state("shared", {
         abstract: true,
         templateUrl: "../shared/shared.html",
