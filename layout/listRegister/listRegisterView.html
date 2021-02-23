@@ -1,0 +1,32 @@
+<article dir="rtl"  ng-controller="listRegisterController">
+  <div >
+ 
+    <table class="uk-table uk-table-striped">
+      <tr>
+        <th class="uk-width-small">نام ونام خانوادگی</th>
+        <th class="uk-table-shrink">ایمیل</th>
+        <th class="uk-table-expand">پسوورد</th>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" ng-model="filter.name" name="name"/>
+        </td>
+        <td>
+          <input type="text" ng-model="filter.email" name="email"/>
+        </td>
+        <td>
+          <input type="text" ng-model="filter.pass" name="pass" />
+        </td>
+      </tr>
+      <tr ng-repeat="p in reports | filter : filter">
+        <td>{{p.name | date:m/dd/yy }}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.decrip}}</td>
+      </tr>
+     
+    </table>
+  </div>
+ 
+</article>
+
+
