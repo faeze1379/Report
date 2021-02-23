@@ -3,9 +3,9 @@
  
     <table class="uk-table uk-table-striped">
       <tr>
-        <th class="uk-width-small">نام ونام خانوادگی</th>
+        <th class="uk-width-small">نام کاربری</th>
         <th class="uk-table-shrink">ایمیل</th>
-        <th class="uk-table-expand">پسوورد</th>
+        <th class="uk-table-expand">کلمه ی عبور</th>
       </tr>
       <tr>
         <td>
@@ -21,7 +21,7 @@
       <tr ng-repeat="p in users | filter : filter">
         <td>{{p.name | date:m/dd/yy }}</td>
         <td>{{p.email}}</td>
-        <td>{{p.decrip}}</td>
+        <td>{{p.pass}}</td>
       </tr>
      
     </table>

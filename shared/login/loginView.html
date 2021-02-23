@@ -1,7 +1,7 @@
 <div class="uk-margin-top">
   <p class="uk-text-uppercase">login</p>
 </div>
-<form name="myForm" action="#saveReport">
+<form name="myForm" ng-controller="loginController">
   <div class="uk-margin-top">
     <input
       placeholder="Username"
@@ -28,7 +28,7 @@
     <input type="checkbox" class="uk-checkbox" /> Remember me
   </div>
   <div class="uk-margin">
-    <button class="uk-button uk-button-secondary uk-button-small">
+    <button class="uk-button uk-button-secondary uk-button-small" ng-click="login()">
       Log in
     </button>
   </div>

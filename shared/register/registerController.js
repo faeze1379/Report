@@ -1,6 +1,7 @@
 app.controller("registerController", function ($scope) {
     $scope.register = function () {
-      var users = JSON.parse(localStorage.getItem("users"));
+
+        var users = JSON.parse(localStorage.getItem("users"));
   
       users = !users ? [] : users;
       var b = {
@@ -8,9 +9,10 @@ app.controller("registerController", function ($scope) {
         email: $scope.myEmail,
         pass: $scope.myPass,
       };
+    
       users.push(b);
       localStorage.setItem("users", JSON.stringify(users));
-      var users = JSON.parse(localStorage.getItem("users"));
+     
       alert("عضویت با موفقیت انجام شد");
     };
     $scope.left = function () {
