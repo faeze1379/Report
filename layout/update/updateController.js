@@ -1,21 +1,21 @@
 app.controller("updateController", function ($scope) {
   $scope.users = JSON.parse(localStorage.getItem("users"));
-  $scope.update = function (record) {
-    var users=JSON.parse(localStorage.getItem("users"));
-    //console.log(users)
-    var index = users.findIndex(function(item) {
-      return item.name == record.name;
-    });
-    users.update(index,1);
-
-    var a = {
-      name: $scope.myName,
-      email: $scope.email,
-      Pass: $scope.Pass,
-    };
-    users.push(a);
-     console.log(users);
-    localStorage.setItem("users",JSON.stringify(users));
-    $scope.users = JSON.parse(localStorage.getItem("users"));
+  var user=JSON.parse(localStorage.getItem("user"));
+  $scope.myName=user.name
+  $scope.Email=user.email
+  $scope.Pass=user.pass
+  
+  $scope.update = function () {
+  var users = JSON.parse(localStorage.getItem("users"));
+  JSON.parse(localStorage.getItem("user"));
+  var c = {
+  name: $scope.myName,
+  email: $scope.Email,
+  pass: $scope.Pass
   };
+  localStorage.setItem("user", JSON.stringify(c));
+  JSON.parse(localStorage.getItem("user"));
+  users.push(c);
+  localStorage.setItem("users", JSON.stringify(users));
+  }
   });

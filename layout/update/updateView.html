@@ -1,23 +1,27 @@
-<div ng-controller="updateController">
+<article>
+  <div ng-controller="updateController" dir="rtl">
       <form class="uk-form sabt2 uk-width-3-5 uk-align uk-align-center uk-padding uk-padding-medium uk-flex uk-flex-center " name="myForm">  
     <div>
-          <div>
-              <input type="text" class="uk-input uk-margin-top uk-form-width-medium" placeholder="نام کاربری" 
-              name="myName" ng-model="myName" required/>
-              <span class="uk-form-danger" ng-show="myForm.myName.$invalid">*</span>
+      <legend class="uk-legend">ویرایش حساب کاربری</legend>
+          <div class="uk-margin-top">
+              <input type="text" class="uk-input uk-margin-top uk-form-width-large" placeholder="نام کاربری" 
+              name="Name" ng-model="myName" required/>
           </div>
-          <div>
-            <input type="tel" class="uk-input uk-margin-top uk-form-width-medium"  name="email" ng-model="email" placeholder="ایمیل"/>
+          <div class="uk-margin-top">
+            <input type="tel" class="uk-input uk-margin-top uk-form-width-large"  name="email" ng-model="Email" placeholder="ایمیل"/>
         </div>
-          <div>
-            <input type="password" class="uk-input uk-margin-top uk-form-width-medium" placeholder="رمز ورود" 
-            name="Pass" ng-model="Pass" required/>
-            <span class="uk-form-danger" ng-show="myForm.Pass.$invalid">*</span>
+          <div class="uk-margin-top">
+            <input type="password" class="uk-input  uk-margin-top uk-form-width-large" placeholder="رمز ورود" 
+            name="Pass" ng-model="Pass"/>
+           
             <tr ng-repeat="p in users "></tr>
-        </div>
-              <button type="submit" class="uk-button uk-button-secondary uk-margin-top" ng-click="update()">update</button> 
-        </div>
+        </div >
+        <div class="uk-margin-top">
+              <button type="submit" class="uk-button uk-button-secondary uk-margin-top" ng-click="update()">ویرایش</button> 
+            </div>
+            </div>
 </div> 
 
       </form>
     </div>
+  </article>
